@@ -106,5 +106,26 @@
     {% endif %}
 
     <!--Add a dealer table here -->
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Dealer Name</th>
+          <th scope="col">City</th>
+          <th scope="col">Address</th>
+          <th scope="col">Zip</th>
+          <th scope="col">State</th>
+        </tr>
+        {% for entry in data%}
+        <tr>
+          <td>{{entry.id}}</td>
+          <td>{{entry.full_name}}</td>
+          <td>{{entry.city}}</td>
+          <td>{{entry.address}}</td>
+          <td>{{entry.zip}}</td>
+          <td>{{entry.st}}</td>
+        </tr>
+        {% endfor %}
+    </table>
   </body>
 </html>
